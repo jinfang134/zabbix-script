@@ -1,4 +1,4 @@
-# zabbix-script
+# Zabbix-Script
 Inlude some script used in zabbix
 
 ## Slack Alert 
@@ -12,9 +12,10 @@ This is simply a Bash script that uses the custom alert script functionality wit
 
 1. Update the script`src/slack.sh` with your parameter,you can test it via run this script.
 ```shell
-./slack.sh recruiting_zabbix Problem:Disk I/O is overloaded on Recruiting02 "Problem has been resolved at 12:43:22 on 2018.08.22\n \
-Problem name: Disk I/O is overloaded on Recruiting02 \
-Host: Recruiting02 \
+./slack.sh recruiting_zabbix "Problem:Disk I/O is overloaded on Recruiting02" \
+"Problem has been resolved at 12:43:22 on 2018.08.22\n \
+Problem name: Disk I/O is overloaded on Recruiting02 \n\
+Host: Recruiting02 \n\
 Severity: Warning"
 ```
 2. Copy`src/slack.sh` to your AlertScriptsPath directory that is specified within the Zabbix servers' configuration file (zabbix_server.conf) and must be executable by the user running the zabbix_server binary (usually "zabbix") on the Zabbix server:
